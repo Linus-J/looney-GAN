@@ -37,7 +37,11 @@ Since the stylegan2 repo requires an older version of PyTorch, I would recommend
 `pip3 install -r looney-GAN/requirements.txt`
 
 ##### Download the trained model:
+`cd looney-GAN`
+
 `gdown https://drive.google.com/u/0/uc?id=1Gr12jNrma90hTPfInXdV0E4cbpzQtF3b&export=download`
+
+`cd ..`
 
 ##### (Optional) Download the dataset:
 `gdown https://drive.google.com/u/0/uc?id=1m3WhwDsxmHPxigVqWmSFz-V7hOsAdttH&export=download`
