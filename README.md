@@ -1,12 +1,12 @@
 
 ## looney-GAN
 
-### [Early training results.](https://drive.google.com/file/d/14soCTccYFG_pHGuXyHpgYuB8sNXQ0Pkg/view?usp=share_link)
-![Original](https://github.com/Linus-J/looney-GAN/blob/main/generatedbgs.png)
-
+### General description
 This is a repository for a GAN model that generates cartoon backgrounds similar to those produced by the [animators](https://looneytunes.fandom.com/wiki/Category:Cartoons_by_background_artist) of [Looney Tunes (1930-69)](https://en.wikipedia.org/wiki/Looney_Tunes).
 
 The model was trained using the open-source [stylegan2-ada-pytorch](https://github.com/NVlabs/stylegan2-ada-pytorch) network infrastructure provided by [NVIDIA](https://github.com/NVlabs). [(Paper here)](https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/ada-paper.pdf).
+### [Early training results.](https://drive.google.com/file/d/14soCTccYFG_pHGuXyHpgYuB8sNXQ0Pkg/view?usp=share_link)
+![Original](https://github.com/Linus-J/looney-GAN/blob/main/generatedbgs.png)
 
 ### Dataset description
 The dataset used to train the model was curated using source images collected from [@looneytunesbackgrounds](https://www.instagram.com/looneytunesbackgrounds/), [animation.backgrounds](https://www.instagram.com/animation.backgrounds/) and [@cartoonarchitecture](https://www.instagram.com/cartoonarchitecture/) on Instagram. 
