@@ -2,6 +2,7 @@
 ## looney-GAN
 
 ### [Early training results.](https://drive.google.com/file/d/14soCTccYFG_pHGuXyHpgYuB8sNXQ0Pkg/view?usp=share_link)
+![Original](https://github.com/Linus-J/looney-GAN/blob/main/generatedbgs.png)
 
 This is a repository for a GAN model that generates cartoon backgrounds similar to those produced by the [animators](https://looneytunes.fandom.com/wiki/Category:Cartoons_by_background_artist) of [Looney Tunes (1930-69)](https://en.wikipedia.org/wiki/Looney_Tunes).
 
