@@ -54,6 +54,6 @@ This example will generate 4 images which can be viewed in the created `out` dir
 
 `python stylegan2-ada-pytorch/generate.py --outdir=out --trunc=1 --seeds=85,265,297,849 --network=./looney-GAN/final.pkl`
     
-The `--outdir` is a required option is used to determine the output directory, `--trunc`is an optional argument that truncates multiple generated images together if set to 1, `--seeds` is an optional argument to seed singular or multiple image generations and `--network` is a required option that points towards the pre-trained final.pkl model.
+The `--outdir` is a required option is used to determine the output directory, `--trunc`is an optional argument that determines the variability of the generated images where 1 is untruncated and values towards zero result in full truncation, `--seeds` is an optional argument to seed singular or multiple image generations and `--network` is a required option that points towards the pre-trained final.pkl model.
 
 Edit these options to generate your desried backgrounds.
