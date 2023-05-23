@@ -15,9 +15,19 @@ The dataset used to train the model was curated using source images collected fr
 
 Black and white images, as well as unsuitable images such as those with animals/humans in the picture or real-life sketches, were excluded from the dataset.
 
-All images were processed using [ImageMagick](https://imagemagick.org/)  to batch normalise all images to be 512x512 centered PNGs, where non-square images were scaled to remove black bars whilst maintaining their source aspect ratios. Using higher resolution images such as 1024x1024 requires significantly more training time and resources.
+All images were processed using [ImageMagick](https://imagemagick.org/)  to batch normalise all images to be 512x512 centred PNGs, where non-square images were scaled to remove black bars whilst maintaining their source aspect ratios. Using higher resolution images such as 1024x1024 requires significantly more training time and resources.
 
 After the data was normalised, the dataset was mirrored on the x-axis to double the amount of data used to train and test the network resulting in a set of 3634 images.
+
+#### Commands to normalise dataset:
+Whilst within the directory containing all the images:
+
+##### Batch convert all JPGs to PNGs:
+`mogrify -format png *.jpg`
+##### Remove old JPG files:
+`find -type f -name '*.jpg' -delete`
+##### Batch resize new PNG to desired size and maintain source aspect ratios:
+`mogrify -format png -resize '512x512^' -gravity center -extent 512x512`
 
 ### Generator installation
 #### Linux:
