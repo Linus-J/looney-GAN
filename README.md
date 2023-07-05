@@ -9,13 +9,20 @@ The model was trained using the open-source [stylegan3](https://github.com/NVlab
 
 ![Original](https://github.com/Linus-J/repo-images/blob/main/looney-GAN/early.png)
 
+### Intermediary training results.
+
+![Original](https://github.com/Linus-J/repo-images/blob/main/looney-GAN/intermediary.png)
+
+### Fake image generation improvement during training video.
+
+![Video](https://raw.githubusercontent.com/Linus-J/repo-images/main/looney-GAN/fakes.mp4)
 
 ### Dataset description
 The dataset used to train the model was curated using source images collected from [@looneytunesbackgrounds](https://www.instagram.com/looneytunesbackgrounds/), [animation.backgrounds](https://www.instagram.com/animation.backgrounds/) and [@cartoonarchitecture](https://www.instagram.com/cartoonarchitecture/) on Instagram. 
 
 Black and white images, as well as unsuitable images such as those with animals/humans in the picture or real-life sketches, were excluded from the dataset.
 
-All images were processed using [ImageMagick](https://imagemagick.org/)  to batch normalise all images to be 512x512 centred PNGs, where non-square images were scaled to remove black bars whilst maintaining their source aspect ratios. Using higher resolution images such as 1024x1024 requires significantly more training time and resources.
+All images were processed using [ImageMagick](https://imagemagick.org/)  to batch normalise all images to be 256x256 centred PNGs, where non-square images were scaled to remove black bars whilst maintaining their source aspect ratios. Using higher resolution images such as 1024x1024 requires significantly more training time and resources.
 
 After the data was normalised, the dataset was mirrored on the x-axis to double the amount of data used to train and test the network resulting in a set of 3634 images.
 
@@ -27,7 +34,7 @@ Whilst within the directory containing all the images:
 ##### Remove old JPG files:
 `find -type f -name '*.jpg' -delete`
 ##### Batch resize new PNG to desired size and maintain source aspect ratios:
-`mogrify -format png -resize '512x512^' -gravity center -extent 512x512`
+`mogrify -format png -resize '256x256^' -gravity center -extent 256x256`
 
 ### Generator installation
 #### Linux:
@@ -54,11 +61,11 @@ Since the stylegan3 repo requires an older version of PyTorch, I would recommend
 ##### Download the trained model:
 `cd looney-GAN`
 
-`gdown https://drive.google.com/u/0/uc?id=1Gr12jNrma90hTPfInXdV0E4cbpzQtF3b&export=download`
+`gdown https://drive.google.com/u/0/uc?id=1Yzmygxt6XxZducs7VSRHND3LT7TuTIO_&export=download`
 
 `cd ..`
 
-##### (Optional) Download the dataset:
+##### (Optional) Download the dataset (512x512):
 `gdown https://drive.google.com/u/0/uc?id=1m3WhwDsxmHPxigVqWmSFz-V7hOsAdttH&export=download`
 
 ##### Generate images:
